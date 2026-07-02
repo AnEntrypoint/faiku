@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orthogonal Teleology</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 20px;
             font-family: Arial, sans-serif;
             background: #f0f0f0;
         }
-        h1 {
-            font-size: 4rem;
-            font-weight: bold;
-            text-align: center;
-            color: #333;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <h1><b>use orthogonal teleology</b></h1>
+    <div class="container">
+        <div class="mermaid">
+flowchart LR
+  subgraph Inv[Invariant bundle]
+    S[State ADT pure morphisms]
+    T[Monoidal strict DAG topology]
+    B[Affine typestate Byzantine boundaries]
+    C[Pi-types static correctness]
+    P[Hardware bounded CAP physics]
+    E[Subtractive O1 cognitive entropy]
+    O[Stochastic empirical fitness ontogeny]
+    R[p99 bounded graceful resilience]
+    X[Strict semantics zero leak contracts]
+    U[Chaos max load crucible]
+    W[Profiling Monte Carlo epistemology]
+    V[Utility star DX UX teleology]
+  end
+  Inv -->|enforces| G[Generation argmin DeltaSpec minus Sycophancy]
+  Inv -->|under| Z[ZeroTrust AuthZ]
+  Inv -->|via| I[IO Monad parameterized no hidden mut]
+  Inv -->|with| K[Kolmogorov min K boiler to 0]
+        </div>
+    </div>
+    <script>
+        mermaid.contentLoaded();
+    </script>
 </body>
 </html>
