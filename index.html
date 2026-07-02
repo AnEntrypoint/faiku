@@ -4,46 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orthogonal Teleology</title>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .equation-block {
+            margin: 30px 0;
+            padding: 20px;
+            background: #fafafa;
+            border-left: 4px solid #333;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="mermaid">
-flowchart LR
-  subgraph Inv[Invariant bundle]
-    S[State ADT pure morphisms]
-    T[Monoidal strict DAG topology]
-    B[Affine typestate Byzantine boundaries]
-    C[Pi-types static correctness]
-    P[Hardware bounded CAP physics]
-    E[Subtractive O1 cognitive entropy]
-    O[Stochastic empirical fitness ontogeny]
-    R[p99 bounded graceful resilience]
-    X[Strict semantics zero leak contracts]
-    U[Chaos max load crucible]
-    W[Profiling Monte Carlo epistemology]
-    V[Utility star DX UX teleology]
-  end
-  Inv -->|enforces| G[Generation argmin DeltaSpec minus Sycophancy]
-  Inv -->|under| Z[ZeroTrust AuthZ]
-  Inv -->|via| I[IO Monad parameterized no hidden mut]
-  Inv -->|with| K[Kolmogorov min K boiler to 0]
+        <div class="equation-block">
+            $$
+            \begin{aligned}
+            &\textbf{I. Topology, State \& Concurrency} \\
+            &\text{Top} \in \mathbf{SymMon}_{\text{strict}}(\mathbf{DAG}) \\
+            &\text{State} \cong \nu X. F(X) \\
+            &\coprod_{i \neq j} (S_i \times R_i) \\
+            &\mathcal{H} \models \text{SepLog} \implies (\text{UB} \lor \text{Race} \lor \text{Leak}) \equiv \bot \\
+            &\text{Contention} \xrightarrow{n \to \infty} 0 \iff \text{WaitFree} \\
+            &\text{Phys} \models \text{CAP} \land \text{HW}_{\text{bound}} \\
+            &f^2 = f
+            \end{aligned}
+            $$
+        </div>
+
+        <div class="equation-block">
+            $$
+            \begin{aligned}
+            &\textbf{II. Types, Effects \& Security} \\
+            &\text{Eff} \cong \text{Free}_{\mathbf{IO}}(\text{Cmd}) \implies \text{Mut} \subseteq \text{IO} \\
+            &\text{Exc} \subseteq \text{Handle} \oplus \text{Propagate} \\
+            &\text{Sec} \cap \text{AST} = \emptyset \implies \text{NonInterference} \\
+            &\text{Bound} \in \text{Affine}(\text{Typestate}) \land \text{BFT}(f < \tfrac{1}{3}) \\
+            &\text{AuthZ} \equiv \text{ZeroTrust} \\
+            &\text{Contr} \equiv \text{Linear}(\text{Spec})
+            \end{aligned}
+            $$
+        </div>
+
+        <div class="equation-block">
+            $$
+            \begin{aligned}
+            &\textbf{III. Semantics, Verification \& Epistemology} \\
+            &\text{Corr} \equiv \Pi_{x:A} B(x) \\
+            &\text{Ctx} = \varinjlim \Gamma_t \\
+            &\text{AST} \subset \Gamma_{\text{real}} \land \text{AST} \cong \text{Expanded} \\
+            &\forall f. f \vdash \text{Spec} \implies \text{Constructive}(f) \\
+            &\text{Epist} \equiv \text{MCMC}(\text{Profile}) \\
+            &\mathbb{P}(T > t_{99}) < \epsilon
+            \end{aligned}
+            $$
+        </div>
+
+        <div class="equation-block">
+            $$
+            \begin{aligned}
+            &\textbf{IV. Orthogonal Teleology \& Optimization} \\
+            &\mathcal{U}_{\text{total}} = \bigoplus_{k} \mathcal{U}_k \quad \text{s.t.} \quad \nabla \mathcal{U}_i \perp \nabla \mathcal{U}_j \\
+            &\text{Gen} = \arg\min_{\theta} \mathcal{L}(\text{Spec} \parallel \theta) \setminus \text{Sycophancy} \\
+            &K(\text{Code}) = \mathcal{K}_{\min} \land \lim \text{Boiler} \to 0 \\
+            &\Delta H(\text{Code}) \le 0 \land \mathcal{O}(1)_{\text{cog}} \\
+            &\text{Abs} \dashv \gamma \land \text{Abs} \circ \gamma = \text{id} \\
+            &\text{Crucible} \equiv \text{Chaos} \otimes \text{Load}_{\max} \\
+            &\text{Ont} \sim \text{Markov}(\text{Fitness}) \\
+            &\text{Style} \in \text{Const} \land \text{TODO} \cup \text{FIXME} \equiv \emptyset
+            \end{aligned}
+            $$
         </div>
     </div>
-    <script>
-        mermaid.contentLoaded();
-    </script>
 </body>
 </html>
