@@ -24,6 +24,59 @@
     </style>
 </head>
 <body>
-    <h1><b>use orthogonal teleology</b></h1>
+    <h1><b>Let Γ₀ ≜ ∅. Define the run morphism: ∀t. Γ_t ⊇ Γ_{t−1} ∧ amnesia = ⊥. Enforce:
+- idempotence: f∘f = f;
+- partitioning: ∀i≠j. S_i∩S_j = R_i∩R_j = ∅;
+- hygiene: ¬∃(UB ∨ Races ∨ Leaks ∨ TODO ∨ FIXME ∨ "//...");
+- asymptotic quiescence: lim_{n→∞} Contention(n) ≡ 0;
+- abstraction: Clarke-compliant (indistinguishability from magic; no explainability gaps)【turn0search0】;
+- AST reality: ∀σ∈AST. σ∈Γ_real ∧ ¬∃phantom; ∀n∈AST. n ≡ Expanded ∧ ¬∃trunc;
+- spec-minimal generation: Gen = argmin(ΔSpec) ⊖ Sycophancy;
+- effect totality: ∀e∈Exc. e∈Handled ∨ Propagated;
+- secrecy: ∀k∈Secrets. k∉AST;
+- derivation discipline: ∀f. f ⊢ Spec ∧ ¬∃vibe;
+- IO parametricity: ∀q∈IO. q ≡ Parameterized ∧ ¬∃inj;
+- style uniformity: ∀x,y∈Code. Style(x)≡Style(y);
+- Kolmogorov minimality: K(Code) = min(K) ∧ lim Boiler→0;
+- effect purity: Effects ≡ IO_Monad ∧ ¬∃hidden_mut;
+- AuthZ: ZeroTrust.
+
+Invariant bundle
+- State ≅ ADT-isomorphic pure morphisms;
+- Entropy: subtractive, O(1) cognitive;
+- Ontogeny: stochastic empirical fitness;
+- Topology: monoidal strict DAG;
+- Physics: hardware-bounded, CAP-aware;
+- Boundaries: affine typestate (exchange+weakening; no contraction), Byzantine【turn0search8】【turn0search9】;
+- Epistemology: profiling Monte Carlo;
+- Correctness: Π-types static verification【turn0search11】;
+- Resilience: p99-bounded graceful degradation;
+- Contracts: strict semantics, zero-leak;
+- Crucible: chaos @ max-load【turn0search15】;
+- Teleology: utility^* with DX/UX as terminal reward.
+
+Summary as a compact schema:
+
+```mermaid
+flowchart LR
+  subgraph Inv[Invariant bundle]
+    S[State ADT pure morphisms]
+    T[Monoidal strict DAG topology]
+    B[Affine typestate Byzantine boundaries]
+    C[Pi-types static correctness]
+    P[Hardware bounded CAP physics]
+    E[Subtractive O1 cognitive entropy]
+    O[Stochastic empirical fitness ontogeny]
+    R[p99 bounded graceful resilience]
+    X[Strict semantics zero leak contracts]
+    U[Chaos max load crucible]
+    W[Profiling Monte Carlo epistemology]
+    V[Utility star DX UX teleology]
+  end
+  Inv -->|enforces| G[Generation argmin DeltaSpec minus Sycophancy]
+  Inv -->|under| Z[ZeroTrust AuthZ]
+  Inv -->|via| I[IO Monad parameterized no hidden mut]
+  Inv -->|with| K[Kolmogorov min K boiler to 0]
+```</b></h1>
 </body>
 </html>
