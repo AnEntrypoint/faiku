@@ -68,15 +68,15 @@
             <button class="copy-btn" onclick="copySpec(this)">Copy</button>
             <pre id="spec-text">TYPES: forall t: t |- Dependent AND NOT exists(any|dynamic|hallucinated)
 STATE: forall s: s in ADT AND s in Affine AND NOT exists(UB|leak|UAF|double_free)
-FUNC:  forall f: f in Total AND (f in Pure OR f in IO) AND NOT exists(hidden_mut|partial)
+FUNC:  forall f: f in Total AND (f in Pure OR f in IO) AND NOT exists(hidden_mut)
 CONC:  forall (a,b): HB(a,b) OR Sync(a,b) AND NOT exists(race|deadlock)
-NET:   forall m: ExactlyOnce(m) AND Idempotent(m) AND BFT(m)
-SEC:   forall k: ConstantTime(k) AND NOT exists(branch_secret|sidechannel)
-PROOF: forall p: p |- Complete AND NOT exists(admit|sorry|TODO|FIXME)
+NET:   forall m: ExactlyOnce(m) AND Idempotent(m) AND ByzantineTolerant(m)
+SEC:   forall k: ConstantTime(k) AND NOT exists(secretDependentControlFlow|sidechannel)
+PROOF: forall p: p |- Complete AND NOT exists(admit|deferral)
 PERF:  forall d: CacheLocal(d) AND BranchPredictable(d)
 ERR:   forall e: Handled(e) OR Propagated(e) AND NOT exists(panic)
-AST:   forall n: Expanded(n) AND Grounded(n) AND NOT exists(trunc|phantom)
-AUTH:  forall r: ZeroTrust(r) AND Parameterized(r) AND NOT exists(injection)</pre>
+AST:   forall n: Expanded(n) AND Grounded(n) AND NOT exists(trunc|phantom|TODO|FIXME)
+AUTH:  forall r: Authenticated(r) AND Parameterized(r) AND NOT exists(injection)</pre>
         </div>
     </div>
     <script>
