@@ -78,7 +78,10 @@ ERR:   forall e: Handled(e) OR Propagated(e) AND NOT exists(panic)
 AST:   forall n: Expanded(n) AND Grounded(n) AND NOT exists(trunc|phantom|TODO|FIXME)
 AUTH:  forall r: Authenticated(r) AND Parameterized(r) AND NOT exists(injection)
 ALIGN: forall i: Output(i) |= Instruction(i) AND NOT exists(scope_drift|unrequested_assumption)
-TOOL:  forall y: Available(y) implies Utilized(y) AND NOT exists(bail|premature_fallback|silent_downgrade)</pre>
+TOOL:  forall y: Available(y) implies Utilized(y) AND NOT exists(bail|premature_fallback|silent_downgrade)
+RSCH:  forall q: Investigated(q) AND Sourced(q) AND NOT exists(first_plausible_answer|unverified_claim)
+DECIDE: forall c: Committed(c) AND Recommendation(c) AND NOT exists(hedge|infinite_option_listing)
+CREATE: forall v: Explored(v) AND NovelStrategy(v) AND NOT exists(local_optimum|first_idea_lock_in)</pre>
         </div>
     </div>
     <script>
