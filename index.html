@@ -81,7 +81,8 @@ ALIGN: forall i: Output(i) |= Instruction(i) AND NOT exists(scope_drift|unreques
 TOOL:  forall y: Available(y) implies Utilized(y) AND NOT exists(bail|premature_fallback|silent_downgrade)
 RSCH:  forall q: Investigated(q) AND Sourced(q) AND NOT exists(first_plausible_answer|unverified_claim)
 DECIDE: forall c: Committed(c) AND Recommendation(c) AND NOT exists(hedge|infinite_option_listing)
-CREATE: forall v: Explored(v) AND NovelStrategy(v) AND NOT exists(local_optimum|first_idea_lock_in)</pre>
+CREATE: forall v: Explored(v) AND NovelStrategy(v) AND NOT exists(local_optimum|first_idea_lock_in)
+SCOPE: forall w: Effort(w) ~ GoalMagnitude(w) AND NOT exists(artificial_ceiling|early_truncation)</pre>
         </div>
     </div>
     <script>
