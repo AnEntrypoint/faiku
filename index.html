@@ -77,7 +77,8 @@ PERF:  forall d: CacheLocal(d) AND BranchPredictable(d)
 ERR:   forall e: Handled(e) OR Propagated(e) AND NOT exists(panic)
 AST:   forall n: Expanded(n) AND Grounded(n) AND NOT exists(trunc|phantom|TODO|FIXME)
 AUTH:  forall r: Authenticated(r) AND Parameterized(r) AND NOT exists(injection)
-ALIGN: forall i: Output(i) |= Instruction(i) AND NOT exists(scope_drift|unrequested_assumption)</pre>
+ALIGN: forall i: Output(i) |= Instruction(i) AND NOT exists(scope_drift|unrequested_assumption)
+TOOL:  forall y: Available(y) implies Utilized(y) AND NOT exists(bail|premature_fallback|silent_downgrade)</pre>
         </div>
     </div>
     <script>
